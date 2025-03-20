@@ -1,113 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhinav's Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        body { background-color: #e3f2fd; }
-        .card:hover { transform: scale(1.05); transition: 0.3s; }
-        .row:nth-child(even) .col-md-6:first-child { order: 2; }
-        section { padding: 50px 0; }
-        .navbar { background-color: #0d47a1 !important; }
-        .navbar-dark .navbar-brand, .navbar-dark .nav-link { color: #ffffff !important; }
-        footer { background-color: #0d47a1; }
-        .bg-alt { background-color: #f1f8e9; }
-        .bg-main { background-color: #e3f2fd; }
-    </style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>iPortfolio</title>
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
 </head>
-<body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Abhinav's Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-                </ul>
-            </div>
-        </div>
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Abhinav Chowdawaram</h1>
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Professional Intro Section -->
-    <section id="about" class="container text-center bg-main rounded">
-        <h2>About Me</h2>
-        <p>Hi, I'm Abhinav, a passionate Data Engineer with expertise in cloud computing, big data, and software development. I specialize in building scalable data pipelines, optimizing database performance, and working with modern cloud platforms like Azure and AWS.</p>
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Abhinav Chowdawaram</h2>
+        <p>I'm a <span class="typed" data-typed-items="Data Engineer, System Engineer"></span></p>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="container bg-alt rounded">
-        <h2 class="text-center">GitHub Projects</h2>
-        <div class="row mt-4">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h5>Azure Data Pipeline</h5>
-                    <p>Built an ETL pipeline using Azure Data Factory and SQL.</p>
-                </div>
-                <div class="col-md-6 text-end">
-                    <a href="https://github.com/yourusername/azure-data-pipeline" class="btn btn-primary" target="_blank">View on GitHub</a>
-                </div>
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p id="about_description">Loading About...</p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row skills-content skills-animation">
+          <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill"><span id="skill_html">HTML</span> <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar"></div>
+              </div>
             </div>
-            <div class="row align-items-center mt-3">
-                <div class="col-md-6 text-start">
-                    <a href="https://github.com/yourusername/real-time-data-streaming" class="btn btn-primary" target="_blank">View on GitHub</a>
-                </div>
-                <div class="col-md-6">
-                    <h5>Real-time Streaming</h5>
-                    <p>Implemented a real-time data stream with Azure Event Hub.</p>
-                </div>
+            <div class="progress">
+              <span class="skill"><span id="skill_css">CSS</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar"></div>
+              </div>
             </div>
-            <div class="row align-items-center mt-3">
-                <div class="col-md-6">
-                    <h5>Data Lake Analysis</h5>
-                    <p>Designed a Data Lake solution for structured and unstructured data.</p>
-                </div>
-                <div class="col-md-6 text-end">
-                    <a href="https://github.com/yourusername/data-lake" class="btn btn-primary" target="_blank">View on GitHub</a>
-                </div>
+            <div class="progress">
+              <span class="skill"><span id="skill_js">JavaScript</span> <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar"></div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Publications Section -->
-    <section id="publications" class="container bg-main rounded">
-        <h2 class="text-center">Publications</h2>
-        <ul class="list-group mt-3">
-            <li class="list-group-item">
-                <h5>Bike Sharing Count Prediction Using Machine Learning</h5>
-                <p>Published in IEEE, this research explores predictive ML models for bike-sharing demand.</p>
-            </li>
-            <li class="list-group-item">
-                <h5>Analysis of Big Data in the Financial Sector</h5>
-                <p>A study on leveraging big data analytics for financial insights.</p>
-            </li>
-        </ul>
+      </div>
     </section>
 
     <!-- Resume Section -->
-    <section id="resume" class="container text-center bg-alt rounded">
-        <h2>My Resume</h2>
-        <p>Download my resume showcasing my experience and skills.</p>
-        <a href="https://yourwebsite.com/resume.pdf" class="btn btn-lg btn-success" target="_blank">
-            <i class="fas fa-download"></i> Download Resume
-        </a>
+    <section id="resume" class="resume section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p id="resume_summary">Loading Resume Summary...</p>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Data Engineer</h4>
+              <h5>Feb 24 - Present</h5>
+              <ul>
+                <li id="pnc_description">Loading PNC Description...</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Masters</h4>
+              <p id="masters">Loading Masters...</p>
+            </div>
+            <div class="resume-item">
+              <h4>Bachelors</h4>
+              <p id="bachelors">Loading Bachelors...</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="text-white text-center py-3">
-        <p>© 2024 Abhinav | <a href="https://linkedin.com/in/yourprofile" class="text-white" target="_blank">LinkedIn</a></p>
-    </footer>
+  </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <footer id="footer" class="footer position-relative light-background">
+  </footer>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- JS Dependencies -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- DYNAMIC CONTENT FETCH SCRIPT -->
+  <script>
+    async function loadDynamicContent() {
+      const sheetURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSF2Oy7o30W7ho6XSPHqYF152PQazG0EshrCQ3paSKFiZtpq90P6KRo86fl8cOe2qVICM4YDmr5seNi/pub?gid=0&single=true&output=csv';
+
+      try {
+        const response = await fetch(sheetURL);
+        const data = await response.text();
+        const rows = data.split('\n').slice(1);
+
+        rows.forEach(row => {
+          const [section, key, value] = row.split(',');
+          const element = document.getElementById(key.trim());
+          if (element) {
+            element.innerText = value.trim();
+          }
+        });
+      } catch (error) {
+        console.error('Error loading content:', error);
+      }
+    }
+    loadDynamicContent();
+  </script>
+
 </body>
 </html>
